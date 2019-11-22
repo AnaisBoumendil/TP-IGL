@@ -12,11 +12,11 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-image:url("bg.png");
+                color: #777878;
                 font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
+                font-weight: bold;
+                height: 200vh;
                 margin: 0;
             }
 
@@ -49,7 +49,7 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: #f8f9fa;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -57,6 +57,10 @@
                 text-decoration: none;
                 text-transform: uppercase;
             }
+
+            .links > a:visited {
+                color: #636b6f;
+            }    
 
             .m-b-md {
                 margin-bottom: 30px;

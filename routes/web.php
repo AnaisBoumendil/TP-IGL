@@ -28,6 +28,7 @@ Route::post('/login/custom',[
 
 
 
+
 Route::get('inscrire',function(){
     return view('inscrire');
 
