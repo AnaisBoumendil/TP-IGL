@@ -15,7 +15,7 @@
                            <label for="idNom" class="col-md-4 col-form-label text-md-right">Nom  </label>
 
                            <div class="col-md-6">
-                              <input type="text" v-model="nom" id="idNom" required> 
+                              <input type="text" v-model="nom" id="idNom" placeholder="Entrez le nom" required> 
                            </div>
                            
                         </div>
@@ -24,7 +24,7 @@
                            <label for="idPrenom" class="col-md-4 col-form-label text-md-right">Prenom  </label>
 
                            <div class="col-md-6">
-                             <input type="text" v-model="prenom" id="idPrenom" required> 
+                             <input type="text" v-model="prenom" id="idPrenom" placeholder="Entrez le prenom"  required> 
                            </div>  
                         </div>
 
@@ -32,21 +32,21 @@
                           <label for="IdNoteTd" class="col-md-4 col-form-label text-md-right">Note td</label>
 
                           <div class="col-md-6">
-                            <input type="text" v-model="noteTd" id="IdNoteTd" required> 
+                            <input type="text" v-model="noteTd" id="IdNoteTd" placeholder="Entrez le note de TD"  required> 
                           </div>  
                         </div>
 
                          <div class="form-group row">
                           <label for="IdNoteExam1" class="col-md-4 col-form-label text-md-right">Note examen 1</label>
                           <div class="col-md-6">
-                            <input type="text" v-model="note1" id="IdNoteExam1" required> 
+                            <input type="text" v-model="note1" id="IdNoteExam1" placeholder="Entrez le note de l'examen 1"  required> 
                           </div>  
                         </div>
 
                          <div class="form-group row">
                           <label for="IdNoteExam2" class="col-md-4 col-form-label text-md-right">Note examen 2</label>
                           <div class="col-md-6">
-                             <input type="text" v-model="note2" id="IdNoteExam2" required> 
+                             <input type="text" v-model="note2" id="IdNoteExam2" placeholder="Entrez le note de l'examen 2"  required> 
                           </div> 
                         </div>
 

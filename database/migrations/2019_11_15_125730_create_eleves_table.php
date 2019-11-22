@@ -21,7 +21,7 @@ class CreateElevesTable extends Migration
             $table->string('lieuNaiss');
             $table->string('adr');
             $table->string('mail');
-            $table->string('numIns');
+            $table->string('numIns')->unique();
             $table->string('niveau');
             $table->timestamps();
         });

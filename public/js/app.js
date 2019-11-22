@@ -37913,7 +37913,12 @@ var render = function() {
                           expression: "nom"
                         }
                       ],
-                      attrs: { type: "text", id: "idNom", required: "" },
+                      attrs: {
+                        type: "text",
+                        id: "idNom",
+                        placeholder: "Entrez le nom",
+                        required: ""
+                      },
                       domProps: { value: _vm.nom },
                       on: {
                         input: function($event) {
@@ -37947,7 +37952,12 @@ var render = function() {
                           expression: "prenom"
                         }
                       ],
-                      attrs: { type: "text", id: "idPrenom", required: "" },
+                      attrs: {
+                        type: "text",
+                        id: "idPrenom",
+                        placeholder: "Entrez le prenom",
+                        required: ""
+                      },
                       domProps: { value: _vm.prenom },
                       on: {
                         input: function($event) {
@@ -37981,7 +37991,12 @@ var render = function() {
                           expression: "noteTd"
                         }
                       ],
-                      attrs: { type: "text", id: "IdNoteTd", required: "" },
+                      attrs: {
+                        type: "text",
+                        id: "IdNoteTd",
+                        placeholder: "Entrez le note de TD",
+                        required: ""
+                      },
                       domProps: { value: _vm.noteTd },
                       on: {
                         input: function($event) {
@@ -38015,7 +38030,12 @@ var render = function() {
                           expression: "note1"
                         }
                       ],
-                      attrs: { type: "text", id: "IdNoteExam1", required: "" },
+                      attrs: {
+                        type: "text",
+                        id: "IdNoteExam1",
+                        placeholder: "Entrez le note de l'examen 1",
+                        required: ""
+                      },
                       domProps: { value: _vm.note1 },
                       on: {
                         input: function($event) {
@@ -38049,7 +38069,12 @@ var render = function() {
                           expression: "note2"
                         }
                       ],
-                      attrs: { type: "text", id: "IdNoteExam2", required: "" },
+                      attrs: {
+                        type: "text",
+                        id: "IdNoteExam2",
+                        placeholder: "Entrez le note de l'examen 2",
+                        required: ""
+                      },
                       domProps: { value: _vm.note2 },
                       on: {
                         input: function($event) {
