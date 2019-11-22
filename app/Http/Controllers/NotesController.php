@@ -17,7 +17,7 @@ class NotesController extends Controller
             'note1'=>['required',  'max:20','min:0'],
             'note2'=>['required',  'max:20','min:0'],
         ]);
-        Notes::create([
+        $note=Notes::create([
             'nom'=> request('nom'),
             'prenom'=> request('prenom'),
             'noteTd'=>request('noteTd'),
@@ -25,7 +25,7 @@ class NotesController extends Controller
             'note2'=>request('note2'),
         ]);
 
-        return("notes insérée");
+        return(response()->json($note,200));
 
     }
 }
