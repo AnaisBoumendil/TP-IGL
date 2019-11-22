@@ -14,7 +14,7 @@
                            <label for="idNom" class="col-md-4 col-form-label text-md-right">Nom  </label>
 
                            <div class="col-md-6">
-                             <input type="text" v-model="nom" id="idNom"> 
+                             <input type="text" v-model="nom" id="idNom" placeholder="Entrez le nom" required> 
                            </div>
                         </div>
 
@@ -22,7 +22,7 @@
                            <label for="idPrenom" class="col-md-4 col-form-label text-md-right">Prenom  </label>
 
                            <div class="col-md-6">
-                             <input type="text" v-model="prenom" id="idPrenom"> 
+                             <input type="text" v-model="prenom" id="idPrenom" placeholder="Entrez le prenom" required> 
                            </div>
                         </div>
 
@@ -46,7 +46,7 @@
                            <label for="idLieuNaiss" class="col-md-4 col-form-label text-md-right">Lieu de naissance  </label>
 
                            <div class="col-md-6">
-                              <input type="text" v-model="lieuNaiss" id="idLieuNaiss"> 
+                              <input type="text" v-model="lieuNaiss" id="idLieuNaiss" placeholder="Entrez le lieu de naissance" required> 
                            </div>
                         </div>
 
@@ -54,7 +54,7 @@
                            <label for="idAdr" class="col-md-4 col-form-label text-md-right"> Adresse  </label>
 
                            <div class="col-md-6">
-                             <input type="text" v-model="adr" id="idAdr"> 
+                             <input type="text" v-model="adr" id="idAdr" placeholder="Entrez l'adresse" required> 
                            </div>
                         </div>
 
@@ -62,7 +62,7 @@
                            <label for="idMail" class="col-md-4 col-form-label text-md-right"> Adresse e mail </label>
 
                            <div class="col-md-6">
-                             <input type="email" v-model="mail" id="idMail"> 
+                             <input type="email" v-model="mail" id="idMail" placeholder="Entrez l'adresse mail" required> 
                            </div>
                         </div>
 
@@ -70,7 +70,7 @@
                            <label for="idNumIns" class="col-md-4 col-form-label text-md-right"> Numéro d'inscription  </label>
 
                            <div class="col-md-6">
-                             <input type="text" v-model="numIns" id="idNumIns"> 
+                             <input type="text" v-model="numIns" id="idNumIns" placeholder="Entrez le numéro d'inscription" required> 
                            </div>
                         </div>
 
@@ -78,7 +78,7 @@
                            <label for="idNiv" class="col-md-4 col-form-label text-md-right"> Niveau  </label>
 
                            <div class="col-md-6">
-                             <input type="text" v-model="niveau" id="idNiv">
+                             <input type="text" v-model="niveau" id="idNiv" placeholder="Entrez le niveau" required>
                            </div>
                         </div>
 

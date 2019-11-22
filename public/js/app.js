@@ -37510,7 +37510,12 @@ var render = function() {
                           expression: "nom"
                         }
                       ],
-                      attrs: { type: "text", id: "idNom" },
+                      attrs: {
+                        type: "text",
+                        id: "idNom",
+                        placeholder: "Entrez le nom",
+                        required: ""
+                      },
                       domProps: { value: _vm.nom },
                       on: {
                         input: function($event) {
@@ -37544,7 +37549,12 @@ var render = function() {
                           expression: "prenom"
                         }
                       ],
-                      attrs: { type: "text", id: "idPrenom" },
+                      attrs: {
+                        type: "text",
+                        id: "idPrenom",
+                        placeholder: "Entrez le prenom",
+                        required: ""
+                      },
                       domProps: { value: _vm.prenom },
                       on: {
                         input: function($event) {
@@ -37614,7 +37624,12 @@ var render = function() {
                           expression: "lieuNaiss"
                         }
                       ],
-                      attrs: { type: "text", id: "idLieuNaiss" },
+                      attrs: {
+                        type: "text",
+                        id: "idLieuNaiss",
+                        placeholder: "Entrez le lieu de naissance",
+                        required: ""
+                      },
                       domProps: { value: _vm.lieuNaiss },
                       on: {
                         input: function($event) {
@@ -37648,7 +37663,12 @@ var render = function() {
                           expression: "adr"
                         }
                       ],
-                      attrs: { type: "text", id: "idAdr" },
+                      attrs: {
+                        type: "text",
+                        id: "idAdr",
+                        placeholder: "Entrez l'adresse",
+                        required: ""
+                      },
                       domProps: { value: _vm.adr },
                       on: {
                         input: function($event) {
@@ -37682,7 +37702,12 @@ var render = function() {
                           expression: "mail"
                         }
                       ],
-                      attrs: { type: "email", id: "idMail" },
+                      attrs: {
+                        type: "email",
+                        id: "idMail",
+                        placeholder: "Entrez l'adresse mail",
+                        required: ""
+                      },
                       domProps: { value: _vm.mail },
                       on: {
                         input: function($event) {
@@ -37716,7 +37741,12 @@ var render = function() {
                           expression: "numIns"
                         }
                       ],
-                      attrs: { type: "text", id: "idNumIns" },
+                      attrs: {
+                        type: "text",
+                        id: "idNumIns",
+                        placeholder: "Entrez le numéro d'inscription",
+                        required: ""
+                      },
                       domProps: { value: _vm.numIns },
                       on: {
                         input: function($event) {
@@ -37750,7 +37780,12 @@ var render = function() {
                           expression: "niveau"
                         }
                       ],
-                      attrs: { type: "text", id: "idNiv" },
+                      attrs: {
+                        type: "text",
+                        id: "idNiv",
+                        placeholder: "Entrez le niveau",
+                        required: ""
+                      },
                       domProps: { value: _vm.niveau },
                       on: {
                         input: function($event) {
