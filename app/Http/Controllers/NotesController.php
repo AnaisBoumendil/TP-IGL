@@ -28,4 +28,6 @@ class NotesController extends Controller
         return(response()->json($note,200));
 
     }
+
+    
 }

@@ -20,7 +20,7 @@ class inscrireController extends Controller
             'numIns'=>['required', 'string', 'max:255'],
             'niveau'=>['required', 'string', 'max:255'],
         ]);
-        Eleves::create([
+        $eleve=Eleves::create([
             'nom'=> request('nom'),
             'prenom'=> request('prenom'),
             'dateNaiss'=> request('dateNaiss'),
@@ -31,7 +31,7 @@ class inscrireController extends Controller
             'niveau'=> request('niveau'),
         ]);
 
-        return("Etudiant ajouté");
+        return(response()->json($eleve,200));
     }
 
 }
