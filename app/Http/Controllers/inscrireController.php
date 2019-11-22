@@ -10,6 +10,16 @@ class inscrireController extends Controller
 {
     public function store()
     {
+        request()->validate([
+            'nom'=>['required', 'string', 'max:255'],
+            'prenom'=>['required', 'string', 'max:255'],
+            'dateNaiss'=>['required'],
+            'lieuNaiss'=>['required', 'string', 'max:255'],
+            'adr'=>['required', 'string', 'max:255'],
+            'mail'=>['required','string', 'email', 'max:255'],
+            'numIns'=>['required', 'string', 'max:255'],
+            'niveau'=>['required', 'string', 'max:255'],
+        ]);
         Eleves::create([
             'nom'=> request('nom'),
             'prenom'=> request('prenom'),

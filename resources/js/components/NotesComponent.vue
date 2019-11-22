@@ -15,15 +15,16 @@
                            <label for="idNom" class="col-md-4 col-form-label text-md-right">Nom  </label>
 
                            <div class="col-md-6">
-                              <input type="text" v-model="nom" id="idNom"> 
+                              <input type="text" v-model="nom" id="idNom" required> 
                            </div>
+                           
                         </div>
 
                         <div class="form-group row">
                            <label for="idPrenom" class="col-md-4 col-form-label text-md-right">Prenom  </label>
 
                            <div class="col-md-6">
-                             <input type="text" v-model="prenom" id="idPrenom"> 
+                             <input type="text" v-model="prenom" id="idPrenom" required> 
                            </div>  
                         </div>
 
@@ -31,21 +32,21 @@
                           <label for="IdNoteTd" class="col-md-4 col-form-label text-md-right">Note td</label>
 
                           <div class="col-md-6">
-                            <input type="text" v-model="noteTd" id="IdNoteTd"> 
+                            <input type="text" v-model="noteTd" id="IdNoteTd" required> 
                           </div>  
                         </div>
 
                          <div class="form-group row">
                           <label for="IdNoteExam1" class="col-md-4 col-form-label text-md-right">Note examen 1</label>
                           <div class="col-md-6">
-                            <input type="text" v-model="note1" id="IdNoteExam1"> 
+                            <input type="text" v-model="note1" id="IdNoteExam1" required> 
                           </div>  
                         </div>
 
                          <div class="form-group row">
                           <label for="IdNoteExam2" class="col-md-4 col-form-label text-md-right">Note examen 2</label>
                           <div class="col-md-6">
-                             <input type="text" v-model="note2" id="IdNoteExam2"> 
+                             <input type="text" v-model="note2" id="IdNoteExam2" required> 
                           </div> 
                         </div>
 
@@ -80,7 +81,8 @@
                 'prenom': '',
                 'noteTd':'',
                 'note1':'',
-                'note2':'',               
+                'note2':'',    
+                            
             }
         },
 
@@ -93,8 +95,7 @@
                     note1:this.note1,
                     note2:this.note2,
                 })
-
-
+                
                 console.log('note inséré')
             }
         },

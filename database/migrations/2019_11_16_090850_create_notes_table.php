@@ -17,9 +17,9 @@ class CreateNotesTable extends Migration
             $table->bigIncrements('id');
             $table->string('nom');
             $table->string('prenom');
-            $table->double('noteTd');
-            $table->double('note1');
-            $table->double('note2');
+            $table->double('noteTd')->check('T_IS_SMALLER_OR_EQUALS', 20);
+            $table->double('note1')->check('T_IS_SMALLER_OR_EQUALS', 20);
+            $table->double('note2')->check('T_IS_SMALLER_OR_EQUALS', 20);
             $table->timestamps();
         });
     }
