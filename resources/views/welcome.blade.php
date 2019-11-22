@@ -12,11 +12,11 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-image:url("bg.png");
+                background-image:url("bg3.jpg");
                 color: #777878;
                 font-family: 'Nunito', sans-serif;
                 font-weight: bold;
-                height: 200vh;
+                height: 100vh;
                 margin: 0;
             }
 
@@ -84,13 +84,13 @@
             @endif
 
             <div class="content">
+                
                 <div class="title m-b-md">
-                    ScoApp
-                </div>
-
-                <div class="links">
+                    <h1>ScoApp</h1>
                     
                 </div>
+                
+                
             </div>
         </div>
     </body>

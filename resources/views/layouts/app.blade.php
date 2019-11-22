@@ -21,7 +21,7 @@
 
     <style>
       html, body {
-         background-image:url("bg.png");
+         background-image:url("bg3.jpg");
          
       }
 
