@@ -2,7 +2,7 @@
 
         
         @section('content')
-           <afficherEtud-component></afficherEtud-component>
+           <afficherEtud-component :eleve="{{$eleve}}"></afficherEtud-component>
            
         @endsection     
          

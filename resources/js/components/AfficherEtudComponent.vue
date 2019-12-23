@@ -5,7 +5,7 @@
                 <div class="card-header">Quels liste souhaitez-vous afficher ?</div>
                     <div class="card-body">
                       
-                      <form method="post" id="idForm"  @submit.prevent="">
+                      <form method="post" id="idForm"  @submit.prevent="listerEtud">
                     
                         <div class="form-group row">
                            <label for="idNiv" class="col-md-4 col-form-label text-md-right">Niveau  </label>
@@ -31,6 +31,10 @@
                            </div>  
                         </div> 
 
+                        <div class="border rounded p-3 mb-4" v-for="">
+
+                        </div>
+
                </div>
             </div>
         </div>
@@ -39,8 +43,30 @@
 
 <script>
     export default {
+
+        props:['eleve'],
+
          mounted() {
             console.log('Component mounted.')
-        }
+        },
+
+        data() {
+            return{
+                'niveau':'',   
+                'section':'',
+                'groupe':'',            
+            },
+        },
+
+        methods: {
+            listerEtud() {
+                axios.post('afficherEtud',{
+                    niveau:this.niveau,
+                    section:this.section,
+                    groupe:this.groupe,
+                })
+                console.log('afficher')
+            }
+        },    
     }
 </script>

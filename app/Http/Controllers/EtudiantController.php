@@ -38,4 +38,12 @@ class EtudiantController extends Controller
         return(response()->json($eleve,200));
     }
 
+    public function index()
+    {
+        $eleve=Eleves::all();
+        return view('afficherEtud',[
+           'eleve'=>$eleve,
+        ]);
+    }
+
 }
