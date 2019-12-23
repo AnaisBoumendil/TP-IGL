@@ -6,7 +6,7 @@ use App\Eleves;
 use Illuminate\Http\Request;
 
 
-class inscrireController extends Controller
+class EtudiantController extends Controller
 {
     public function store()
     {
@@ -19,6 +19,8 @@ class inscrireController extends Controller
             'mail'=>['required','string', 'email', 'max:255'],
             'numIns'=>['required', 'string', 'max:255'],
             'niveau'=>['required', 'string', 'max:255'],
+            'section'=>['required'],
+            'groupe'=>['required','integer'],
         ]);
         $eleve=Eleves::create([
             'nom'=> request('nom'),
@@ -29,6 +31,8 @@ class inscrireController extends Controller
             'mail'=> request('mail'),
             'numIns'=> request('numIns'),
             'niveau'=> request('niveau'),
+            'section'=>request('section'),
+            'groupe'=>request('groupe'),
         ]);
 
         return(response()->json($eleve,200));

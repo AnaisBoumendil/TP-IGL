@@ -26,13 +26,6 @@
                            </div>
                         </div>
 
-                        <div class="form-group row">
-                           <label for="idF" class="col-md-4 col-form-label text-md-right"> Fille  </label>
-                           <input type="radio"  name="choix" id="idF"> 
-                        
-                           <label for="idG" class="col-md-2 col-form-label text-md-right"> Garçon  </label>
-                           <input type="radio"  name="choix" id="idG"> 
-                        </div>
 
                         <div class="form-group row">
                            <label for="idDateNaiss" class="col-md-4 col-form-label text-md-right">Date de naissance  </label>
@@ -82,6 +75,22 @@
                            </div>
                         </div>
 
+                        <div class="form-group row">
+                           <label for="idSection" class="col-md-4 col-form-label text-md-right"> Section  </label>
+
+                           <div class="col-md-6">
+                             <input type="text" v-model="section" id="idSection" placeholder="Entrez la section" required>
+                           </div>
+                        </div>
+
+                        <div class="form-group row">
+                           <label for="idGr" class="col-md-4 col-form-label text-md-right"> Groupe  </label>
+
+                           <div class="col-md-6">
+                             <input type="text" v-model="groupe" id="idGr" placeholder="Entrez le groupe" required>
+                           </div>
+                        </div>
+
                          <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                <input type="submit" value="inscrire" class="btn btn-primary">
@@ -114,7 +123,9 @@
                 'adr':'',
                 'numIns':'',
                 'mail':'',
-                'niveau':'',               
+                'niveau':'',   
+                'section':'',
+                'groupe':'',            
             }
         },
 
@@ -129,7 +140,8 @@
                     numIns:this.numIns,
                     mail:this.mail,
                     niveau:this.niveau,
-
+                    section:this.section,
+                    groupe:this.groupe,
                 })
 
 

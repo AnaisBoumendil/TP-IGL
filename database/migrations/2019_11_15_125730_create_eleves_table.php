@@ -23,6 +23,8 @@ class CreateElevesTable extends Migration
             $table->string('mail');
             $table->string('numIns')->unique();
             $table->string('niveau');
+            $table->char('section');
+            $table->integer('groupe');
             $table->timestamps();
         });
     }

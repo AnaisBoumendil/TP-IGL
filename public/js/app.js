@@ -1972,6 +1972,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -1985,7 +2001,9 @@ __webpack_require__.r(__webpack_exports__);
       'adr': '',
       'numIns': '',
       'mail': '',
-      'niveau': ''
+      'niveau': '',
+      'section': '',
+      'groupe': ''
     };
   },
   methods: {
@@ -1998,7 +2016,9 @@ __webpack_require__.r(__webpack_exports__);
         adr: this.adr,
         numIns: this.numIns,
         mail: this.mail,
-        niveau: this.niveau
+        niveau: this.niveau,
+        section: this.section,
+        groupe: this.groupe
       });
       console.log('inscrit');
     }
@@ -37793,6 +37813,84 @@ var render = function() {
                             return
                           }
                           _vm.niveau = $event.target.value
+                        }
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group row" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-4 col-form-label text-md-right",
+                      attrs: { for: "idSection" }
+                    },
+                    [_vm._v(" Section  ")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-6" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.section,
+                          expression: "section"
+                        }
+                      ],
+                      attrs: {
+                        type: "text",
+                        id: "idSection",
+                        placeholder: "Entrez la section",
+                        required: ""
+                      },
+                      domProps: { value: _vm.section },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.section = $event.target.value
+                        }
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group row" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-4 col-form-label text-md-right",
+                      attrs: { for: "idGr" }
+                    },
+                    [_vm._v(" Groupe  ")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-6" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.groupe,
+                          expression: "groupe"
+                        }
+                      ],
+                      attrs: {
+                        type: "text",
+                        id: "idGr",
+                        placeholder: "Entrez le groupe",
+                        required: ""
+                      },
+                      domProps: { value: _vm.groupe },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.groupe = $event.target.value
                         }
                       }
                     })

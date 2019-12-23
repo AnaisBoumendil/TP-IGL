@@ -34,12 +34,14 @@ Route::get('inscrire',function(){
 
 })->name('inscrire')->middleware('auth');
 
-Route::post('inscrire','inscrireController@store');
+Route::post('inscrire','EtudiantController@store');
 
 Route::get('notes',function(){
     return view('notes');
 
 })->name('notes')->middleware('auth');
+
+
 
 Route::post('notes','NotesController@store');
 

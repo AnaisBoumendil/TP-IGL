@@ -12,7 +12,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-image:url("bg3.jpg");
+                background-image:url("bg.png");
                 color: #777878;
                 font-family: 'Nunito', sans-serif;
                 font-weight: bold;
@@ -49,7 +49,7 @@
             }
 
             .links > a {
-                color: #f8f9fa;
+                color: #636b6f;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
