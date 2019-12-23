@@ -46,9 +46,7 @@
 
         props:['eleve'],
 
-         mounted() {
-            console.log('Component mounted.')
-        },
+        
 
         data() {
             return{
