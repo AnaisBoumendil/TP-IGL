@@ -125,7 +125,7 @@
                 'mail':'',
                 'niveau':'',   
                 'section':'',
-                'groupe':'',            
+                'groupe':'',          
             }
         },
 
@@ -143,8 +143,7 @@
                     section:this.section,
                     groupe:this.groupe,
                 })
-
-
+                window.location.reload();
                 console.log('inscrit')
             }
         },

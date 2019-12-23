@@ -34,6 +34,10 @@ Route::get('inscrire',function(){
 
 })->name('inscrire')->middleware('auth');
 
+Route::get('afficherEtud',function(){
+    return view('afficherEtud');
+});
+
 Route::post('inscrire','EtudiantController@store');
 Route::get('afficherEtud','EtudiantController@index');
 
