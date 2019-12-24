@@ -44,6 +44,7 @@ Route::get('liste',function(){
 
 Route::get('liste','EtudiantController@index');
 
+
 Route::get('notes',function(){
     return view('notes');
 

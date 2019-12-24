@@ -2047,18 +2047,70 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      'niveau': '',
       'etud': []
     };
   },
   created: function created() {
-    var _this = this;
+    console.log('Component mounted.');
+  },
+  methods: {
+    listerEtud: function listerEtud() {
+      var _this = this;
 
-    axios.get('/api/liste').then(function (response) {
-      return _this.etud = response.data;
-    });
+      axios.get('/api/liste', {
+        params: {
+          niveau: this.niveau
+        }
+      }).then(function (response) {
+        return _this.etud = response.data;
+      });
+    }
   }
 });
 
@@ -37982,16 +38034,96 @@ var render = function() {
       _c("div", { staticClass: "col-md-8" }, [
         _c("div", { staticClass: "card" }, [
           _c("div", { staticClass: "card-header" }, [
-            _vm._v("Quels liste d'étudiants voulais-vouz affichez ?")
+            _vm._v("Quelle liste d'étudiants voulez-vous afficher ?")
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
             _c(
-              "ul",
-              _vm._l(_vm.etud, function(e) {
-                return _c("li", [_vm._v(_vm._s(e.nom))])
-              }),
-              0
+              "form",
+              {
+                attrs: { id: "idForm" },
+                on: {
+                  submit: function($event) {
+                    $event.preventDefault()
+                    return _vm.listerEtud($event)
+                  }
+                }
+              },
+              [
+                _c("div", { staticClass: "form-group row" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-4 col-form-label text-md-right",
+                      attrs: { for: "idNiv" }
+                    },
+                    [_vm._v(" Niveau  ")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-6" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.niveau,
+                          expression: "niveau"
+                        }
+                      ],
+                      attrs: {
+                        type: "text",
+                        id: "idNiv",
+                        placeholder: "Entrez le niveau",
+                        required: ""
+                      },
+                      domProps: { value: _vm.niveau },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.niveau = $event.target.value
+                        }
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm._m(0)
+              ]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "card" }, [
+          _c("div", { staticClass: "card-header" }, [
+            _vm._v("Liste des étudiants:")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body table responsive p-0" }, [
+            _c(
+              "table",
+              { staticClass: "table table-hover" },
+              [
+                _vm._m(1),
+                _vm._v(" "),
+                _vm._l(_vm.etud, function(e) {
+                  return _c("tr", [
+                    _c("td", [_vm._v(_vm._s(e.nom))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(e.prenom))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(e.mail))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(e.numIns))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(e.section))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(e.groupe))])
+                  ])
+                })
+              ],
+              2
             )
           ])
         ])
@@ -37999,7 +38131,39 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group row mb-0" }, [
+      _c("div", { staticClass: "col-md-6 offset-md-4" }, [
+        _c("input", {
+          staticClass: "btn btn-primary",
+          attrs: { type: "submit", value: "Lister" }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("th", [_vm._v(" Nom")]),
+      _vm._v(" "),
+      _c("th", [_vm._v(" Prenom")]),
+      _vm._v(" "),
+      _c("th", [_vm._v(" E-mail")]),
+      _vm._v(" "),
+      _c("th", [_vm._v(" N° d'inscription")]),
+      _vm._v(" "),
+      _c("th", [_vm._v(" Section")]),
+      _vm._v(" "),
+      _c("th", [_vm._v(" Groupe ")])
+    ])
+  }
+]
 render._withStripped = true
 
 

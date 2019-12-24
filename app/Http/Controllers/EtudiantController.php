@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class EtudiantController extends Controller
 {
+    
     public function store()
     {
         request()->validate([
@@ -43,10 +44,12 @@ class EtudiantController extends Controller
         return view('liste'); //retourne la vue où seront lister les étudiants
     }
 
+    
+
     public function get(Request $request) //permet de retourner les enregistrement de la table Eleves
     {
-        $etudiant=Eleves::all();
-        return response()->json($etudiant);      
+        $etudiant=Eleves::where('niveau',$request->niveau)->get();
+        return response()->json($etudiant);     
     }
 
 }
