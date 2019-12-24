@@ -19,3 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('notes','notesController@store');
 Route::post('inscrire','EtudiantController@store');
+Route::get('liste','EtudiantController@get');

@@ -2,9 +2,10 @@
 
         
         @section('content')
-           <afficherEtud-component :eleve="{{$eleve}}"></afficherEtud-component>
+           <liste-component></liste-component>
            
-        @endsection     
+        @endsection   
          
          
+
          <script src="/js/app.js"></script>

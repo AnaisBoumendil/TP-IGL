@@ -34,12 +34,15 @@ Route::get('inscrire',function(){
 
 })->name('inscrire')->middleware('auth');
 
-Route::get('afficherEtud',function(){
-    return view('afficherEtud');
-});
+
 
 Route::post('inscrire','EtudiantController@store');
-Route::get('afficherEtud','EtudiantController@index');
+
+Route::get('liste',function(){
+    return view('liste');
+})->name('liste');
+
+Route::get('liste','EtudiantController@index');
 
 Route::get('notes',function(){
     return view('notes');

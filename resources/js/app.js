@@ -22,7 +22,7 @@ window.Vue = require('vue');
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('inscrire-component', require('./components/InscrireComponent.vue').default);
 Vue.component('notes-component', require('./components/NotesComponent.vue').default);
-Vue.component('afficherEtud-component', require('./components/AfficherEtudComponent.vue').default);
+Vue.component('liste-component', require('./components/ListeComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

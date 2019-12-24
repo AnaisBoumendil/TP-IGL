@@ -40,10 +40,13 @@ class EtudiantController extends Controller
 
     public function index()
     {
-        $eleve=Eleves::all();
-        return view('afficherEtud',[
-           'eleve'=>$eleve,
-        ]);
+        return view('liste'); //retourne la vue où seront lister les étudiants
+    }
+
+    public function get(Request $request) //permet de retourner les enregistrement de la table Eleves
+    {
+        $etudiant=Eleves::all();
+        return response()->json($etudiant);      
     }
 
 }
