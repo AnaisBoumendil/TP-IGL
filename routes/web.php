@@ -27,8 +27,6 @@ Route::post('/login/custom',[
 ]);
 
 
-
-
 Route::get('inscrire',function(){
     return view('inscrire');
 
@@ -40,9 +38,10 @@ Route::post('inscrire','EtudiantController@store');
 
 Route::get('liste',function(){
     return view('liste');
-})->name('liste');
 
-Route::get('liste','EtudiantController@index');
+})->name('liste')->middleware('auth');
+
+Route::get('liste','EtudiantController@index')->name('liste');
 
 
 Route::get('notes',function(){

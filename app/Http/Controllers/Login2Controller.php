@@ -17,7 +17,7 @@ class Login2Controller extends Controller
         {
             $user= User::where('email',$request->email)->first(); //recherche du user dans la bdd
             if ($user->isTeacher()){
-                return redirect()->route('notes');
+                return redirect()->route('liste');
             }
             elseif ($user->isAdminWorker()){
                 return redirect()->route('inscrire');
