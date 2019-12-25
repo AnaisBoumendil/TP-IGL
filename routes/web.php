@@ -41,7 +41,7 @@ Route::get('liste',function(){
 
 })->name('liste')->middleware('auth');
 
-Route::get('liste','EtudiantController@index')->name('liste');
+Route::get('liste','EtudiantController@index')->name('liste')->middleware('auth');
 
 
 Route::get('notes',function(){

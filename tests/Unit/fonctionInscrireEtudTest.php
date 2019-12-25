@@ -51,7 +51,10 @@ class fonctionInscrireEtudTest extends TestCase
             'mail'=>'test@gmail.com',
             'numIns'=>'126_9',
             'niveau'=>'1CS',
+            'section'=>'A',
+            'groupe'=>'2',
         ]); //on remplit les champs de la table Eleves de la bdd
+        $response->assertStatus(200); //pour vérifier si la requête POST est réussie
         $this->assertCount(1,Eleves::all()); 
         /*le nombre d'élément dans notre bdd de test doit être 1 car on a inséré un éléve durant le test*/
     }
