@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 class CreateElevesTable extends Migration
 {
     /**
-     * Run the migrations.
+     * Permet de créer la table 'eleves' et ses différents champs.
      *
      * @return void
      */
@@ -30,7 +30,7 @@ class CreateElevesTable extends Migration
     }
 
     /**
-     * Reverse the migrations.
+     * Permet de supprimer la table 'eleves'
      *
      * @return void
      */

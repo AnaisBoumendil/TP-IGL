@@ -19,9 +19,8 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+
 Vue.component('inscrire-component', require('./components/InscrireComponent.vue').default);
-Vue.component('notes-component', require('./components/NotesComponent.vue').default);
 Vue.component('liste-component', require('./components/ListeComponent.vue').default);
 
 /**

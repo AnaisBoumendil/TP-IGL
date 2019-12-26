@@ -13,7 +13,7 @@ class fonctionListerEtudTest extends TestCase
 {
     use RefreshDatabase;
 
-    // Test qui vérifie la redirection vers le login si l'utilisateur n'est pas connecté
+    /// Test qui vérifie la redirection vers le login si l'utilisateur n'est pas connecté
     /** @test */
     public function listeRedirigerVersLoginSiNonConnecter()
     {
@@ -22,32 +22,30 @@ class fonctionListerEtudTest extends TestCase
     }
 
 
-    /* Test qui vérifie la redirection vers la page lister les étudiants
-     si l'utilisateur  connecté est un enseignant*/
+    /** Test qui vérifie la redirection vers la page lister les étudiants
+     ** si l'utilisateur  connecté est un enseignant*/
     /** @test */
     public function allerVersListeSiConnecter(){
         $this->actingAs(factory(User::class)->create([
             'name' =>'nom',
             'firstName' => 'nom',
             'profession' => 'enseignant',
-        ])); //on a généré un utilisateur enseignant
-       $response=$this->get('liste')->assertOk(); //asserOk: si le code de retour est 200
+        ])); /*on a généré un utilisateur enseignant*/
+       $response=$this->get('liste')->assertOk(); /*asserOk: si le code de retour est 200*/
     }
 
 
-    /* Test qui vérifie la réussite de la requete GET et ainsi la lecture de la BDD et
-      l'affichage de la liste d'étudiants*/
+    /**  Test qui vérifie la réussite de la requete GET et ainsi la lecture de la BDD et
+      **l'affichage de la liste d'étudiants*/
     /** @test */
     public function verifierLectureBdd(){
         $this->actingAs(factory(User::class)->create([
             'name' =>'nom',
             'firstName' => 'nom',
             'profession' => 'enseignant',
-        ])); //on a généré un utilisateur enseignant
+        ])); /*on a généré un utilisateur enseignant*/
 
-        //$etud1=$this->create('Eleves');
-        //$etud2=$this->create('Eleves');
-        //$etud3=$this->create('Eleves');
+        
         $this->post('inscrire',[
             'nom' =>'nomEleve',
             'prenom'=>'prenomEleve',
@@ -72,10 +70,10 @@ class fonctionListerEtudTest extends TestCase
             'section'=>'A',
             'groupe'=>'2',
         ]);
-        //on a inséré 2 éléménts dans la bdd
-        $this->assertCount(2,Eleves::all()); //on vérifie si les 2 éléments sont bien insérés
+        /*on a inséré 2 éléménts dans la bdd*/
+        $this->assertCount(2,Eleves::all()); /*on vérifie si les 2 éléments sont bien insérés*/
         $response=$this->json('GET','/api/liste'); 
-        $response->assertStatus(200);//on vérifie si la requête get est réussie 
+        $response->assertStatus(200);/*on vérifie si la requête get est réussie*/ 
 
 
     }

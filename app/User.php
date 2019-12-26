@@ -11,7 +11,7 @@ class User extends Authenticatable
     use Notifiable;
 
     /**
-     * The attributes that are mass assignable.
+     * Regroupe les champs visible de la table 'User' dans la BDD
      *
      * @var array
      */
@@ -19,28 +19,30 @@ class User extends Authenticatable
         'name','firstName','profession', 'email', 'password',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
+    
+     // Regroupe les champs protégés (cachés) de la table 'User' dans la BDD
+     
+     // @var array
+     
     protected $hidden = [
         'password', 'remember_token',
     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
+    
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
 
+    /// Fonction isAdminWorker
+    /// Permet de vérifier si l'utilisateur fait partie de l'administration
+    /// @returns boolean
     public function isAdminWorker(){
         return ($this->profession=="administration");
     }
 
+    /// Fonction isTeacher
+    /// Permet de vérifier si l'utilisateur est un enseignant
+    /// @returns boolean
     public function isTeacher(){
         return ($this->profession=="enseignant");
     }

@@ -12,11 +12,17 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+/// API Routes
+/// Fichier qui contient les API routes
+
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('notes','notesController@store');
+/// POST API
+/// API pour l'inscription des étudiants
 Route::post('inscrire','EtudiantController@store');
+/// GET API
+/// API pour lister les étudiants
 Route::get('liste','EtudiantController@get');

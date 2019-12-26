@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     /**
-     * Create a new controller instance.
+     * le constructeur qui permet de rendre la page 'home' accessible au utilisateur connectés seulement.
      *
      * @return void
      */
@@ -17,9 +17,8 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
+     
+     ** @return view: retourne la 'vue home'
      */
     public function index()
     {

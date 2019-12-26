@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 class CreateUsersTable extends Migration
 {
     /**
-     * Run the migrations.
+     * Permet de créer la table 'users' et ses différents champs.
      *
      * @return void
      */
@@ -27,7 +27,7 @@ class CreateUsersTable extends Migration
     }
 
     /**
-     * Reverse the migrations.
+     * Permet de supprimer la table 'users'
      *
      * @return void
      */
