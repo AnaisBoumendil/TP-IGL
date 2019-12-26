@@ -1948,6 +1948,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -1997,6 +2002,10 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
 //
 //
 //
@@ -37688,32 +37697,48 @@ var render = function() {
                     [_vm._v(" Niveau  ")]
                   ),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-md-6" }, [
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.niveau,
-                          expression: "niveau"
-                        }
-                      ],
-                      attrs: {
-                        type: "text",
-                        id: "idNiv",
-                        placeholder: "Entrez le niveau",
-                        required: ""
-                      },
-                      domProps: { value: _vm.niveau },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
+                  _c("div", { staticClass: "col-md-3" }, [
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.niveau,
+                            expression: "niveau"
                           }
-                          _vm.niveau = $event.target.value
+                        ],
+                        staticClass: "form-control",
+                        attrs: { form: "idForm" },
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.niveau = $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          }
                         }
-                      }
-                    })
+                      },
+                      [
+                        _c("option", [_vm._v(" 1CP ")]),
+                        _vm._v(" "),
+                        _c("option", [_vm._v(" 2CP ")]),
+                        _vm._v(" "),
+                        _c("option", [_vm._v(" 1CS ")]),
+                        _vm._v(" "),
+                        _c("option", [_vm._v(" 2CS ")]),
+                        _vm._v(" "),
+                        _c("option", [_vm._v(" 3CS ")])
+                      ]
+                    )
                   ])
                 ]),
                 _vm._v(" "),
@@ -37871,32 +37896,48 @@ var render = function() {
                     [_vm._v(" Niveau  ")]
                   ),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-md-6" }, [
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.niveau,
-                          expression: "niveau"
-                        }
-                      ],
-                      attrs: {
-                        type: "text",
-                        id: "idNiv",
-                        placeholder: "Entrez le niveau",
-                        required: ""
-                      },
-                      domProps: { value: _vm.niveau },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
+                  _c("div", { staticClass: "col-md-3" }, [
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.niveau,
+                            expression: "niveau"
                           }
-                          _vm.niveau = $event.target.value
+                        ],
+                        staticClass: "form-control",
+                        attrs: { form: "idForm" },
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.niveau = $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          }
                         }
-                      }
-                    })
+                      },
+                      [
+                        _c("option", [_vm._v(" 1CP ")]),
+                        _vm._v(" "),
+                        _c("option", [_vm._v(" 2CP ")]),
+                        _vm._v(" "),
+                        _c("option", [_vm._v(" 1CS ")]),
+                        _vm._v(" "),
+                        _c("option", [_vm._v(" 2CS ")]),
+                        _vm._v(" "),
+                        _c("option", [_vm._v(" 3CS ")])
+                      ]
+                    )
                   ])
                 ]),
                 _vm._v(" "),
