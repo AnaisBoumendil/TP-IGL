@@ -21,20 +21,22 @@
 
     <style>
       html, body {
-         background-image:url("bg.png");
+         background-image:url("mac.jpg");
+         background-size:cover;
+         background-attachement:fixed;
          
       }
-
       
     </style>
 
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light  shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    ScoApp
+                  <img src="{{ asset ('Logo1.png') }}" width="120px" class ="pr-3" style="border-right :solid 1.5px #333">
+                  <span class="pl-3"> Gestion de la scolarité </span>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -60,7 +62,6 @@
                             @endif
                         @else
                            
-
                                 <div >
                                     <a  href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

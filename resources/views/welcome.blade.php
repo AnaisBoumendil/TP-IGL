@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -13,10 +14,10 @@
         <style>
             html, body {
                 background-image:url("bg.png");
+                background-size:cover;
+                background-attachement:fixed;
                 color: #777878;
                 font-family: 'Nunito', sans-serif;
-                font-weight: bold;
-                height: 100vh;
                 margin: 0;
             }
 
@@ -84,13 +85,15 @@
             @endif
 
             <div class="content">
-                
-                <div class="title m-b-md">
-                    <h1>ScoApp</h1>
-                    
-                </div>
-                
-                
+                <div class ="row">
+                     <div class="col-4 ">
+                        <img src="{{ asset ('Logo1.png') }}" width="400px" >
+                     </div>  
+                     <h1>             Outil de gestion de scolarité .. </h1>
+               </div> 
+               <br>
+               <br>
+               
             </div>
         </div>
     </body>
